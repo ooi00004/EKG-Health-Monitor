@@ -1,0 +1,215 @@
+/* Global Styles for Light and Dark Mode */
+.BodyContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 800px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.BodyContainer.light {
+  background-color: #ffffff;
+  color: #505050;
+}
+
+.BodyContainer.dark {
+  background-color: #101010;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+/* Button Container */
+.ButtonContainer {
+  width: 520px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+/* Chart Container */
+.ChartContainer {
+  width: 90%;
+  height: 60%;
+  min-width: 70%;
+  margin-top: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.ChartContainer.light {
+  outline: 0.5px solid rgb(212, 212, 212);
+  background-color: #ffffff;
+}
+
+.ChartContainer.dark {
+  outline: none;
+  background-color: #1e1e1e;
+  box-shadow: none;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  height: 35px;
+  width: 110px;
+  border: none;
+  border-radius: 5px;
+  color: #505050;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  outline: 0.5px solid rgb(212, 212, 212);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Light Mode Button Colors */
+button.light {
+  background-color: #ffffff;
+}
+
+button.light.start:hover {
+  background-color: #8ab17d;
+}
+
+button.light.pause:hover  {
+  background-color: #e9c46a;
+}
+
+button.light.record:hover  {
+  background-color: #f4a261;
+}
+
+button.light.stop:hover  {
+  background-color: #e76f51;
+}
+
+
+/* Dark Mode Button Colors */
+button.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  outline: none;
+}
+
+button.dark.start:hover {
+  background-color: #65b771;
+}
+
+button.dark.pause:hover {
+  background-color: rgb(208, 108, 21);
+}
+
+button.dark.record:hover {
+  background-color: rgb(182, 120, 5);
+}
+
+button.dark.stop:hover {
+  background-color: #cf645c;
+}
+
+/* Button Hover Styles */
+button:hover {
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+button.light:hover {
+  background-color: #e0e0e0;
+}
+
+button.dark:hover {
+  background-color: #444444;
+}
+
+/* Dark Mode Toggle Button */
+.darkModeButtonContainer {
+  margin-top: 20px;
+}
+
+.darkModeButtonContainer button {
+  cursor: pointer;
+  height: 40px;
+  width: 180px;
+  border: none;
+  border-radius: 5px;
+  color: #505050;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #F5F5F5;
+  transition: background-color 0.3s ease;
+  outline: 1px solid rgb(212, 212, 212);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.darkModeButtonContainer button:hover {
+  outline: none;
+  color: white;
+  background-color: #E0E0E0;
+}
+
+
+/* Toggle Button Styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.toggle {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.toggle.light {
+  background-color: #e0e0e0;
+}
+
+.toggle.dark {
+  background-color: #454545;
+}
+
+.toggle-slider {
+  width: 21px;
+  height: 21px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.4s;
+}
+
+.toggle.dark .toggle-slider {
+  transform: translateX(25px);
+}
+
+.toggle-label {
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #505050;
+  transition: color 0.3s;
+}
+
+.BodyContainer.dark .toggle-label {
+  color: #f0f0f0;
+}
